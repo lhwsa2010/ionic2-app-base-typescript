@@ -1,0 +1,46 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+        <icon menu></icon>
+    </button>
+    <ion-title>Login</ion-title>
+</ion-navbar>
+<ion-content padding id="login">
+    <h2 class="brand">Super App</h2>
+    <!--<form (submit)="doLogin($event)" [ng-form-model]="form">
+      <ion-list>
+        <ion-input>
+          <input ng-control="email" type="email" placeholder="Your email">
+        </ion-input>
+        <ion-input>
+          <input ng-control="password" type="password" placeholder="Your password">
+        </ion-input>
+      </ion-list>
+      <button block full type="submit">Log in</button>
+      <div class="options">
+        <a button clear dark block [nav-push]="forgotPasswordPage">Forgot Password?</a>
+        <a button clear dark block [nav-push]="signupPage">Create Account</a>
+      </div>
+    </form>-->
+    <form (ngSubmit)="doLogin($event)" 
+         #frm="ngForm">
+        <ion-list>
+            <ion-input fixed-label>
+                <input  type="email" placeholder="Your email"
+                        value="" ngControl="email"  #name="ngForm" required>
+            </ion-input>
+            <ion-input fixed-label>
+                <input type="password" placeholder="Your password"
+                        value="" ngControl="password"  #name="ngForm" required>
+            </ion-input>
+        </ion-list>
+        <button block  type="submit"  [disabled]="!frm.form.valid" [class.light]="frm.form.valid" [ngClass]="{active: secondary, disabled:light}" >
+             Submit
+        </button>
+        <button block>
+            Forgot Password
+        </button>
+        <button block>
+            Create Account
+        </button>
+    </form>
+</ion-content>
