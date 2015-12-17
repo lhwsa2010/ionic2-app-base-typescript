@@ -1,11 +1,11 @@
-import {CORE_DIRECTIVES, FORM_DIRECTIVES}  from 'angular2/angular2';
+//import {CORE_DIRECTIVES, FORM_DIRECTIVES}  from 'angular2/common';
 import {IonicApp, Page, NavController} from 'ionic-framework/ionic';
 
 //import {SignupPage} from '../signup/signup';
 
 @Page({
     templateUrl: 'app/login/login.html',
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
+    //directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 export class LoginPage {
     constructor(app: IonicApp, nav: NavController) {

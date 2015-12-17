@@ -26,15 +26,15 @@
         <ion-list>
             <ion-input fixed-label>
                 <input  type="email" placeholder="Your email"
-                        value="" ngControl="email"  #name="ngForm" required>
+                        value="" ngControl="email" name="email"  required>
             </ion-input>
             <ion-input fixed-label>
                 <input type="password" placeholder="Your password"
-                        value="" ngControl="password"  #name="ngForm" required>
+                       value="" ngcontrol="password" name="password" required>
             </ion-input>
         </ion-list>
-        <button block  type="submit"  [disabled]="!frm.form.valid" [class.light]="frm.form.valid" [ngClass]="{active: secondary, disabled:light}" >
-             Submit
+        <button block  type="submit" [disabled]="!frm.form.valid">
+            Submit
         </button>
         <button block>
             Forgot Password
