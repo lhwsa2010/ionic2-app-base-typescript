@@ -1,0 +1,30 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+        <icon menu></icon>
+    </button>
+  <ion-title>Sign up</ion-title>
+</ion-navbar>
+
+<ion-content padding id="signup">
+  <h2 class="brand">Super App</h2>
+  <form (ngSubmit)="doSignup($event)" [ngFormModel]="form">
+    <ion-list>
+      <ion-input>
+        <input ngControl="name" type="text" placeholder="Your name">
+      </ion-input>
+      <ion-input>
+        <input ngControl="email" type="email" placeholder="Your email">
+      </ion-input>
+      <ion-input>
+        <input ngControl="password" type="password" placeholder="Your password">
+      </ion-input>
+    </ion-list>
+      <button block full type="submit"
+              [disabled]="!form.valid" [class.button-light]="!form.valid">
+          Create Account
+      </button>
+    <div class="options">
+      <a button clear dark block [navPush]="loginPage">Already have an account?</a>
+    </div>
+  </form>
+</ion-content>
