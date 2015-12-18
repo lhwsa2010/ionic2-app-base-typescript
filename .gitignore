@@ -8,3 +8,11 @@ plugins/
 *.swp
 .DS_Store
 Thumbs.db
+
+# vs files
+*.csproj
+*.sln
+*.user
+*.suo
+bin/
+obj/
